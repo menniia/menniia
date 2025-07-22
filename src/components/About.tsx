@@ -63,7 +63,7 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <div className="bg-gradient-to-br from-[#1E88E5]/80 via-[#3949AB]/80 to-[#8E24AA]/80 p-0.5 rounded-2xl">
+                        <div className="bg-gradient-to-br from-[#616161] via-[#757575]/30 to-[#424242] p-0.5 rounded-2xl">
                             <div className="bg-[#212121]/85 p-8 rounded-2xl">
                                 <h3 className="text-2xl font-bold text-[#EEEEEE] mb-4">
                                     My Journey
