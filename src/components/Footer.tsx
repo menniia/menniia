@@ -87,7 +87,7 @@ const Footer = () => {
 
                 <motion.div
                     initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
+                    whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     viewport={{ once: true }}
                     className="border-t border-[#616161] mt-8 pt-8 text-center"

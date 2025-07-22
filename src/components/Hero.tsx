@@ -1,4 +1,4 @@
-import { motion, easeOut, scale } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import {
     GithubLogoIcon,
@@ -38,7 +38,7 @@ const Hero = () => {
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="container mx-auto px-6 relative z-10 text-center font-jakarta"
+                className="container mx-auto px-6 pt-16 relative z-10 text-center font-jakarta"
             >
                 <motion.div variants={itemVariants}>
                     <h1 className="text-[38px] md:text-7xl font-bold text-[#FFFFFF] mb-6 leading-10">
@@ -74,7 +74,7 @@ const Hero = () => {
                             scale: 1.03,
                         }}
                         whileTap={{ scale: 0.95 }}
-                        className="bg-[#1E88E5] hover:bg-[#1976D2] text-[#FFFFFF] px-8 py-3 rounded-full font-semibold transition-all duration-200"
+                        className="bg-[#1E88E5] hover:bg-[#1976D2] text-[#FFFFFF] px-8 py-3 rounded-full font-semibold transition-all duration-200 cursor-pointer"
                     >
                         View My Work
                     </motion.button>
@@ -90,7 +90,7 @@ const Hero = () => {
                                 "_blank"
                             )
                         }
-                        className="bg-[#1E88E5] hover:bg-[#1976D2] text-[#FFFFFF] px-8 py-3 rounded-full font-semibold transition-all duration-200"
+                        className="border-2 border-[#42A5F5] text-[#42A5F5] hover:bg-[#42A5F5] hover:text-[#FFFFFF] px-8 py-2.5 rounded-full font-semibold transition-all duration-200 cursor-pointer"
                     >
                         Download CV
                     </motion.button>
