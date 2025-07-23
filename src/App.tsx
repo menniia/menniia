@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import { ScrollProgress } from "./components/magicui/scroll-progress";
 import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 function App() {
     useEffect(() => {
@@ -33,9 +35,11 @@ function App() {
         >
             <ScrollProgress className="top-[64px] z-50" />
             <Header />
-            <main>
+            <main className="font-jakarta">
                 <Hero />
                 <About />
+                <Skills />
+                <Projects />
             </main>
             <Footer />
         </motion.div>
