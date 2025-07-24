@@ -23,7 +23,7 @@ const Projects = () => {
             image: "images/leaveImage.webp",
             technologies: ["React", "Javascript", "Tailwind CSS"],
             gitHub: "https://github.com/menniia/employee-management-system",
-            live: "",
+            live: "https://orbithr.netlify.app/",
         },
         {
             title: "New Aggregator API",
