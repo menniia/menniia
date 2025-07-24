@@ -1,3 +1,5 @@
+import sendEmail from "@/utils/emailService";
+import { toast, ToastContainer } from "react-toastify";
 import {
     EnvelopeIcon,
     MapPinIcon,
@@ -13,12 +15,28 @@ const Contact = () => {
         email: "",
         message: "",
     });
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setLoading(true);
 
-        // handle form submission here
-        console.log("Submitting form", formData);
+        const form = e.currentTarget as HTMLFormElement;
+
+        const result = await sendEmail(form);
+
+        if (result.success) {
+            toast.success("Your message has been sent successfully");
+            setFormData({
+                name: "",
+                email: "",
+                message: "",
+            });
+        } else {
+            toast.error("Sorry, please try submitting again");
+        }
+
+        setLoading(false);
     };
 
     const handleChange = (
@@ -47,7 +65,6 @@ const Contact = () => {
             icon: MapPinIcon,
             title: "Location",
             value: "Accra, Ghana",
-            href: "#",
         },
     ];
     return (
@@ -184,15 +201,29 @@ const Contact = () => {
                             </div>
 
                             <motion.button
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.95 }}
                                 type="submit"
-                                className="w-full bg-gradient-to-r from-[#1E88E5]/30 via-[#1E88E5]/50 to-[#1E88E5]/70 hover:from-[#1E88E5]/50 hover:via-[#1E88E5]/70 hover:to-[#1E88E5]/90 text-[#FFFFFF] font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer"
+                                disabled={loading}
+                                className={`w-full bg-gradient-to-r from-[#1E88E5]/30 via-[#1E88E5]/50 to-[#1E88E5]/70 hover:from-[#1E88E5]/50 hover:via-[#1E88E5]/70 hover:to-[#1E88E5]/90 text-[#FFFFFF] font-semibold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 group ${
+                                    loading
+                                        ? "opacity-50 cursor-not-allowed"
+                                        : "cursor-pointer"
+                                }`}
                             >
-                                <span>Submit</span>
-                                <PaperPlaneTiltIcon size={18} />
+                                <span>{loading ? "Sending..." : "Submit"}</span>
+                                <PaperPlaneTiltIcon
+                                    size={18}
+                                    className="group-hover:translate-y-[-4px] group-hover:translate-x-1 transition-transform duration-150"
+                                />
                             </motion.button>
                         </form>
+                        <ToastContainer
+                            position="top-right"
+                            autoClose={5000}
+                            hideProgressBar={false}
+                            closeOnClick
+                            pauseOnHover
+                            draggable
+                        />
                     </motion.div>
                 </div>
             </div>
