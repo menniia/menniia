@@ -70,10 +70,12 @@ const Hero = () => {
                     className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
                 >
                     <motion.button
-                        whileHover={{
-                            scale: 1.03,
-                        }}
+                        whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.95 }}
+                        onClick={() => {
+                            const section = document.querySelector("#projects");
+                            section?.scrollIntoView({ behavior: "smooth" });
+                        }}
                         className="bg-[#1E88E5] hover:bg-[#1976D2] text-[#FFFFFF] px-8 py-3 rounded-full font-semibold transition-all duration-200 cursor-pointer"
                     >
                         View My Work
