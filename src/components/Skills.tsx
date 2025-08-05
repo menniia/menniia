@@ -123,7 +123,7 @@ const Skills = () => {
                                 viewport={{ once: true }}
                                 className="grid grid-cols-2 gap-4"
                             >
-                                {category.skills.map((skill, skillIndex) => (
+                                {category.skills.map((skill) => (
                                     <motion.div
                                         key={skill.name}
                                         variants={itemVariants}
