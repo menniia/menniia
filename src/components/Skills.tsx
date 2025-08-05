@@ -12,8 +12,7 @@ import {
     ShieldCheckIcon,
     WebhooksLogoIcon,
 } from "@phosphor-icons/react/dist/ssr";
-import { motion, scale } from "framer-motion";
-import { tr } from "framer-motion/client";
+import { motion } from "framer-motion";
 
 const Skills = () => {
     const skillCategories = [
