@@ -5,7 +5,6 @@ import {
     LightningIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { motion } from "framer-motion";
-import { NumberTicker } from "./magicui/number-ticker";
 const About = () => {
     const highlights = [
         {
@@ -45,13 +44,8 @@ const About = () => {
                     </h2>
                     <p className="text-xl text-[#E0E0E0] max-w-3xl mx-auto">
                         I am Software Developer with{" "}
-                        <NumberTicker
-                            value={3}
-                            delay={2}
-                            className="text-2xl text-[#42A5F5]"
-                        />
-                        <span className="text-3xl text-[#42A5F5]">+</span> years
-                        of building web applications, and solving complex
+                        <span className="text-3xl text-[#42A5F5]">3+</span>{" "}
+                        years of building web applications, and solving complex
                         technical challenges.
                     </p>
                 </motion.div>

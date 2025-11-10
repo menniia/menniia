@@ -180,7 +180,7 @@ const Skills = () => {
                                 }}
                                 whileHover={{ scale: 1.1, y: -2 }}
                                 viewport={{ once: true }}
-                                className="bg-gradient-to-r from-[#1565C0]/30 to-[#9C27B0]/30 text-[#BBDEFB] px-4 py-2 rounded-full text-sm font-medium border border-[#1E88E5]/30 hover:border-[#2196F3]/80 transition-all duration-200 cursor-default"
+                                className="bg-[#F7F7F7] text-[#1F2937] px-4 py-2 rounded-full text-sm font-medium border border-[#1E88E5]/30 hover:border-[#2196F3]/80 transition-all duration-200 cursor-default"
                             >
                                 {tech}
                             </motion.span>

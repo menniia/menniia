@@ -46,7 +46,7 @@ const Hero = () => {
                         <TypingAnimation
                             as="span"
                             delay={300}
-                            className="text-[38px] md:text-7xl font-bold bg-gradient-to-r from-[#42A5F5] to-[#AB47BC] bg-clip-text text-transparent"
+                            className="text-[38px] md:text-7xl font-bold bg-[#cecccc] bg-clip-text text-transparent"
                         >
                             Donatus Mennia-Quansah
                         </TypingAnimation>
